@@ -1,0 +1,75 @@
+/*
+  Copyright 2015 Skippbox, Ltd
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+*/
+import PropTypes from 'prop-types';
+import Colors from 'styles/Colors';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
+const {
+  ScrollView,
+  RefreshControl,
+} = ReactNative;
+
+/**
+* An enhanced ScrollView component able to handle
+**/
+export default class EnhancedScrollView extends Component {
+
+  static propTypes = {
+    ...ScrollView.propTypes,
+    ...KeyboardAwareScrollView.propTypes,
+    // Call when pull to refresh is triggered
+    onRefresh: PropTypes.func,
+  };
+
+  constructor(props) {
+    super(props);
+    this._userPulledRefresh = false;
+  }
+
+  componentWillReceiveProps() {
+    this._userPulledRefresh = false;
+  }
+
+  render() {
+    const isRefreshing = this._userPulledRefresh;
+
+    return (
+      <KeyboardAwareScrollView
+        {...this.props}
+        extraHeight={100}
+        ref="scrollView"
+        refreshControl={
+          this.props.onRefresh && <RefreshControl
+          refreshing={isRefreshing}
+          onRefresh={this.handleRefresh.bind(this)}
+          colors={[Colors.BLUE, Colors.RED, Colors.ORANGE]}
+          progressBackgroundColor={Colors.WHITE}
+          />
+        }/>
+    );
+  }
+
+  handleRefresh() {
+    this._userPulledRefresh = true;
+    this.props.onRefresh();
+  }
+
+  scrollTo({x = 0, y = 0}) {
+    this.refs.scrollView.scrollToPosition(x, y, true);
+  }
+
+}
+
