@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "260396395869",
+    "firebase_url": "https://skippbox.firebaseio.com",
+    "project_id": "skippbox",
+    "storage_bucket": "skippbox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260396395869:android:71fbc783f3894622",
+        "android_client_info": {
+          "package_name": "com.skippbox.cabin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260396395869-r01202skv52b4r84b66ruuu1f6q8bpfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skippbox.cabin",
+            "certificate_hash": "06410cf30ba31961b08be0f2329e00886ca2373c"
+          }
+        },
+        {
+          "client_id": "260396395869-r2e7709trdhto974h9bv8r9up1vrj7vd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skippbox.cabin",
+            "certificate_hash": "f3adeaed7367980f87e94ef4d3bcc5818d28dc6e"
+          }
+        },
+        {
+          "client_id": "260396395869-n1r39a9q0po65gvmq8nhmdprjn1jrl9c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skippbox.cabin",
+            "certificate_hash": "b855b3b8f2bf474d041e77f24252eb4f67029b21"
+          }
+        },
+        {
+          "client_id": "260396395869-kh48qrsa4chvleupr7kntajal9q5ah6b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "260396395869-e34egeonia5ud6fj1hvb7hf2uk23otd3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSbdkEQ4AZBnnWlyUZFtC-QSpAs8KY0mM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260396395869-kh48qrsa4chvleupr7kntajal9q5ah6b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "260396395869-fpar03ln0q3lqmtou94n1iu38ecdok64.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.skippbox.cabin"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+
